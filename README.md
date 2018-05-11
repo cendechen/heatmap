@@ -1,8 +1,44 @@
 # heatmap
 
-> heatmap js
+>  热力图组建，可以方便绘制热力图，使用非常简单
 
-## Build Setup
+## start
+
+1. 安装热力图
+```
+ npm i heatMap --save-dev
+```
+
+2. 引用热力组件
+```
+import HeatMap from 'heatMap'
+var canvas = document.getElementById('canvas')
+const w = canvas.width
+const h = canvas.height
+const heatMap = new HeatMap(canvas)
+
+let data = []
+for (var i = 0; i < 100 ; i ++) {
+    data.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        value: Math.random() * 100
+    })
+}
+
+heatMap.render(data)
+```
+3. 配置参数介绍
+```
+    options = {
+        grediant: {} // 配置渐变色，
+        max: 0 // 最大的value值
+        min: 0 // 最小的value值
+        size：19 // 单点最小的半径
+        globalAlpha： 0.8 全局的透明度，
+        scale: 'linear', // 默认的数据归一化使用的变化函数  
+    }
+```
 
 ``` bash
 # install dependencies
@@ -27,4 +63,3 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
