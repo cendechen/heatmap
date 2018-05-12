@@ -1,9 +1,8 @@
 {
-  "name": "heatmap",
+  "name": "ce-heatmap",
   "version": "1.0.0",
   "description": "heatmap js",
   "author": "cendechen",
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -17,6 +16,10 @@
   "main": "./dist/index.js",
   "dependencies": {
     "vue": "^2.5.2"
+  },
+  "repository": {
+	"type": "git",
+	"url:": "https://github.com/cendechen/heatmap.git"	
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
